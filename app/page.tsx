@@ -35,10 +35,10 @@ export default function Home() {
 
         <nav className="hidden sm:flex items-center gap-6 text-sm font-medium text-zinc-600 dark:text-zinc-400">
           <Link
-            href="#gallery"
-            className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+            href="/sainte-marie"
+            className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors text-emerald-600 dark:text-emerald-400 font-semibold"
           >
-            Gallery
+            Explore Sainte-Marie 🏝️
           </Link>
           <Link
             href="#subscribe"
