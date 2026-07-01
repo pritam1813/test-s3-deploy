@@ -1,6 +1,7 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import NewsletterForm from "./components/NewsletterForm";
 import Link from "next/link";
+import NatureBeautiful from "./../public/images/Nature_Beautiful.jpg";
 
 export default function Home() {
   return (
@@ -57,12 +58,14 @@ export default function Home() {
               {/* Overlay styling for premium display */}
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent z-10 opacity-80 group-hover:opacity-85 transition-opacity duration-500" />
 
-              <Image
-                src="/Nature_Beautiful.jpg"
+              <ExportedImage
+                src={NatureBeautiful}
                 alt="Breathtaking Nature Landscape"
                 width={1200}
                 height={800}
-                priority
+                sizes="(max-width: 1024px) 100vw, 750px"
+                fetchPriority="high"
+                loading="eager"
                 className="w-full h-87.5 sm:h-120 lg:h-145 object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
 
